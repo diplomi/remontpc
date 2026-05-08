@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ru" data-page="contacts">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#0b1220" />
+
+    <title>Контакты — сервис‑мастерская</title>
+    <meta
+      name="description"
+      content="Контакты мастерской: телефон, email, адрес и график. Форма заявки на ремонт ПК, ноутбуков и периферии."
+    />
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%2338bdf8' d='M10 14a6 6 0 0 1 6-6h32a6 6 0 0 1 6 6v22a6 6 0 0 1-6 6H35l-7 8-7-8H16a6 6 0 0 1-6-6V14Z'/%3E%3Cpath fill='%230b1220' d='M20 18h24a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H20a2 2 0 0 1-2-2V20a2 2 0 0 1 2-2Zm4 20h16v4H24v-4Z'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+    <header class="site-header" data-header>
+      <div class="container header-inner">
+        <a class="brand" href="./index.html" aria-label="На главную">
+          <span class="brand-mark" aria-hidden="true">PC</span>
+          <span class="brand-text">
+            <span class="brand-name">Сервис‑мастерская</span>
+            <span class="brand-sub">ПК • ноутбуки • периферия</span>
+          </span>
+        </a>
+
+        <nav class="nav" aria-label="Основная навигация" data-nav>
+          <a class="nav-link" href="./services.html" data-navlink="services">Услуги</a>
+          <a class="nav-link" href="./prices.html" data-navlink="prices">Цены</a>
+          <a class="nav-link" href="./about.html" data-navlink="about">О мастерской</a>
+          <a class="nav-link" href="./contacts.html" data-navlink="contacts">Контакты</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="chip" href="tel:+79197590259" data-phone>
+            <span class="chip-label">Позвонить</span>
+            <span class="chip-strong">+7 (919) 759-02-59</span>
+          </a>
+          <button class="btn btn-ghost burger" type="button" aria-label="Открыть меню" data-burger>
+            <span class="burger-lines" aria-hidden="true"></span>
+          </button>
+          <a class="btn btn-primary" href="#request">Оставить заявку</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="section section-alt" id="contacts">
+        <div class="container">
+          <div class="section-head">
+            <h1 class="h2">Контакты</h1>
+            <p class="muted">Свяжитесь с нами любым удобным способом.</p>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-card contact-card--stack">
+              <h2 class="h4">Связаться</h2>
+              <div class="contact-list">
+                <a class="contact-link" href="tel:+79197590259" data-phone>+7 (919) 759-02-59</a>
+                <a class="contact-link" href="mailto:service@yandex.ru" data-email>service@yandex.ru</a>
+              </div>
+              <p class="muted contact-address">Ставропольский край, г. Пятигорск, ул. Ермолова, зд. 12</p>
+            </div>
+            <div class="contact-card">
+              <h2 class="h4">Режим работы</h2>
+              <div class="contact-list">
+                <p class="muted">Пн‑Пт: 9:00–18:00</p>
+                <p class="muted">Сб: 10:00–16:00</p>
+                <p class="muted">Вс: выходной</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="request">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="h2">Заявка на ремонт</h2>
+            <p class="muted">Оставьте заявку — мы свяжемся с вами.</p>
+          </div>
+
+          <div class="contact-grid">
+            <div class="hero-card" aria-label="Форма заявки">
+              <div class="hero-card-top">
+                <h3 class="h3">Опишите проблему</h3>
+                <p class="muted">Ответим с ориентировочной стоимостью и сроком.</p>
+              </div>
+
+              <form class="form" data-request-form>
+                <label class="field">
+                  <span class="field-label">Имя</span>
+                  <input class="input" name="name" autocomplete="name" placeholder="Как к вам обращаться" />
+                </label>
+
+                <label class="field">
+                  <span class="field-label">Телефон</span>
+                  <input
+                    class="input"
+                    name="phone"
+                    inputmode="tel"
+                    autocomplete="tel"
+                    placeholder="+7 (___) ___‑__‑__"
+                    required
+                  />
+                </label>
+
+                <label class="field">
+                  <span class="field-label">Устройство</span>
+                  <select class="input" name="device" required>
+                    <option value="ПК">ПК</option>
+                    <option value="Ноутбук">Ноутбук</option>
+                    <option value="Моноблок">Моноблок</option>
+                    <option value="Принтер / МФУ">Принтер / МФУ</option>
+                    <option value="Роутер / интернет">Роутер / интернет</option>
+                    <option value="Другое">Другое</option>
+                  </select>
+                </label>
+
+                <label class="field">
+                  <span class="field-label">Что случилось</span>
+                  <textarea
+                    class="input textarea"
+                    name="problem"
+                    rows="4"
+                    placeholder="Например: перегревается, шумит, не грузится Windows…"
+                    required
+                  ></textarea>
+                </label>
+
+                <button class="btn btn-primary btn-lg" type="submit">Отправить</button>
+                <p class="form-status" aria-live="polite" data-form-status></p>
+              </form>
+            </div>
+
+            <div class="contact-card">
+              <h3 class="h4">Быстрые варианты связи</h3>
+              <p class="muted">Если удобнее — звонок или письмо без формы.</p>
+              <div class="contact-list">
+                <a class="contact-link" href="tel:+79197590259" data-phone>+7 (919) 759-02-59</a>
+                <a class="contact-link" href="mailto:service@yandex.ru" data-email>service@yandex.ru</a>
+              </div>
+              <div class="contact-actions">
+                <a class="btn btn-secondary" href="tel:+79197590259" data-phone>Позвонить</a>
+                <a class="btn btn-ghost" href="mailto:service@yandex.ru" data-email>Написать на email</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="muted">© <span data-year></span> Сервис‑мастерская. Все права защищены.</p>
+        <div class="footer-links">
+          <a class="muted" href="./services.html">Услуги</a>
+          <a class="muted" href="./prices.html">Цены</a>
+          <a class="muted" href="./contacts.html">Контакты</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./assets/js/main.js" defer></script>
+  </body>
+</html>
+
