@@ -32,7 +32,7 @@
 
     <header class="site-header" data-header>
       <div class="container header-inner">
-        <a class="brand" href="./index.html" aria-label="На главную">
+        <a class="brand" href="#top" aria-label="На главную">
           <span class="brand-mark" aria-hidden="true">PC</span>
           <span class="brand-text">
             <span class="brand-name">Сервис‑мастерская</span>
@@ -41,10 +41,10 @@
         </a>
 
         <nav class="nav" aria-label="Основная навигация" data-nav>
-          <a class="nav-link" href="./services.html" data-navlink="services">Услуги</a>
-          <a class="nav-link" href="./prices.html" data-navlink="prices">Цены</a>
-          <a class="nav-link" href="./about.html" data-navlink="about">О мастерской</a>
-          <a class="nav-link" href="./contacts.html" data-navlink="contacts">Контакты</a>
+          <a class="nav-link" href="#services" data-navlink="services">Услуги</a>
+          <a class="nav-link" href="#prices" data-navlink="prices">Цены</a>
+          <a class="nav-link" href="#about" data-navlink="about">О мастерской</a>
+          <a class="nav-link" href="#contacts" data-navlink="contacts">Контакты</a>
         </nav>
 
         <div class="header-actions">
@@ -55,7 +55,7 @@
           <button class="btn btn-ghost burger" type="button" aria-label="Открыть меню" data-burger>
             <span class="burger-lines" aria-hidden="true"></span>
           </button>
-          <a class="btn btn-primary" href="./contacts.html#request">Оставить заявку</a>
+          <a class="btn btn-primary" href="#request">Оставить заявку</a>
         </div>
       </div>
     </header>
@@ -73,6 +73,11 @@
               Быстро выясняем причину, согласуем смету и возвращаем устройство в работу. ПК, ноутбуки и
               периферия — ремонт, профилактика, настройка.
             </p>
+
+            <div class="hero-cta">
+              <a class="btn btn-primary" href="#request">Оставить заявку</a>
+              <a class="btn btn-ghost" href="tel:+79197590259" data-phone>Позвонить</a>
+            </div>
 
             <div class="mini" aria-label="Коротко о нас">
               <div class="card">
@@ -92,41 +97,153 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="services">
         <div class="container">
           <div class="section-head">
-            <h2 class="h2">Подробнее</h2>
-            <p class="muted">Коротко на главной — детали на отдельных страницах.</p>
+            <h2 class="h2">Услуги</h2>
+            <p class="muted">Ремонтируем «железо», настраиваем софт, подключаем периферию и сеть.</p>
           </div>
 
           <div class="cards">
-            <a class="card" href="./services.html" style="text-decoration: none">
-              <h3 class="h4">Услуги</h3>
-              <p class="muted">Диагностика, ремонт, профилактика, настройка.</p>
-            </a>
-            <a class="card" href="./prices.html" style="text-decoration: none">
-              <h3 class="h4">Цены</h3>
-              <p class="muted">Прайс и примеры популярных работ.</p>
-            </a>
-            <a class="card" href="./about.html" style="text-decoration: none">
-              <h3 class="h4">О мастерской</h3>
-              <p class="muted">Как работаем, отзывы, FAQ.</p>
-            </a>
+            <article class="card">
+              <h3 class="h4">Диагностика</h3>
+              <p class="muted">Определим причину неисправности, предложим варианты решения и смету.</p>
+              <ul class="list">
+                <li>Проверка питания, температур, ошибок</li>
+                <li>SMART/поверхность диска</li>
+                <li>Тест ОЗУ/видеокарты</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3 class="h4">Ремонт и замена комплектующих</h3>
+              <p class="muted">Поменяем то, что действительно нужно — без навязываний.</p>
+              <ul class="list">
+                <li>SSD/HDD, ОЗУ, БП, кулеры</li>
+                <li>Матрица/клавиатура ноутбука</li>
+                <li>Разъёмы питания/USB</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3 class="h4">Чистка и профилактика</h3>
+              <p class="muted">Уберём пыль, заменим термопасту, снизим шум и нагрев.</p>
+              <ul class="list">
+                <li>Чистка системы охлаждения</li>
+                <li>Термопаста/термопрокладки</li>
+                <li>Проверка вентиляторов</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3 class="h4">Windows и ПО</h3>
+              <p class="muted">Установка/переустановка, настройка, драйверы, базовая защита.</p>
+              <ul class="list">
+                <li>Windows 10/11</li>
+                <li>Офис, браузеры, почта</li>
+                <li>Оптимизация автозагрузки</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3 class="h4">Интернет и Wi‑Fi</h3>
+              <p class="muted">Настроим роутер, устраним разрывы, ускорим домашнюю сеть.</p>
+              <ul class="list">
+                <li>Настройка роутера/mesh</li>
+                <li>Диагностика кабеля/розеток</li>
+                <li>Оптимизация каналов Wi‑Fi</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3 class="h4">Периферия</h3>
+              <p class="muted">Подключим и настроим принтеры/МФУ, сканеры, веб‑камеры.</p>
+              <ul class="list">
+                <li>Драйверы и печать по сети</li>
+                <li>Настройка сканирования</li>
+                <li>Решение ошибок печати</li>
+              </ul>
+            </article>
           </div>
 
           <div class="cta-row">
             <div class="cta-box">
-              <h3 class="h4">Нужна консультация?</h3>
-              <p class="muted">Оставьте заявку или позвоните — ответим и сориентируем.</p>
+              <h3 class="h4">Не уверены, что именно нужно?</h3>
+              <p class="muted">Оставьте заявку — подскажем по симптомам и сориентируем по цене.</p>
             </div>
-            <a class="btn btn-primary" href="./contacts.html#request">Оставить заявку</a>
-            <a class="btn btn-ghost" href="tel:+79197590259" data-phone>Позвонить</a>
-            <a class="btn btn-secondary" href="./contacts.html">Контакты</a>
+            <a class="btn btn-primary" href="#request">Оставить заявку</a>
           </div>
         </div>
       </section>
 
-      <section class="section section-alt">
+      <section class="section section-alt" id="prices">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="h2">Цены</h2>
+            <p class="muted">Окончательная стоимость зависит от диагностики и согласуется до ремонта.</p>
+          </div>
+
+          <div class="price-grid" role="list">
+            <div class="price" role="listitem">
+              <div class="price-top">
+                <h3 class="h4">Диагностика</h3>
+                <p class="price-value">от 0 ₽*</p>
+              </div>
+              <p class="muted">*Бесплатно при дальнейшем ремонте. Иначе — по согласованию.</p>
+            </div>
+
+            <div class="price" role="listitem">
+              <div class="price-top">
+                <h3 class="h4">Чистка + термопаста</h3>
+                <p class="price-value">от 1 490 ₽</p>
+              </div>
+              <p class="muted">Снижаем температуру, убираем шум, проверяем охлаждение.</p>
+            </div>
+
+            <div class="price" role="listitem">
+              <div class="price-top">
+                <h3 class="h4">Установка Windows</h3>
+                <p class="price-value">от 1 990 ₽</p>
+              </div>
+              <p class="muted">С драйверами, настройкой, базовым набором программ.</p>
+            </div>
+
+            <div class="price" role="listitem">
+              <div class="price-top">
+                <h3 class="h4">Апгрейд (SSD/ОЗУ)</h3>
+                <p class="price-value">от 990 ₽</p>
+              </div>
+              <p class="muted">Подбор комплектующих, установка, перенос системы (по необходимости).</p>
+            </div>
+
+            <div class="price" role="listitem">
+              <div class="price-top">
+                <h3 class="h4">Настройка Wi‑Fi/роутера</h3>
+                <p class="price-value">от 990 ₽</p>
+              </div>
+              <p class="muted">Подключение, защита, оптимизация канала и скорости.</p>
+            </div>
+
+            <div class="price" role="listitem">
+              <div class="price-top">
+                <h3 class="h4">Настройка принтера/МФУ</h3>
+                <p class="price-value">от 990 ₽</p>
+              </div>
+              <p class="muted">Драйверы, печать по сети, устранение типовых ошибок.</p>
+            </div>
+          </div>
+
+          <div class="cta-row">
+            <div class="cta-box">
+              <h3 class="h4">Нужна точная цена?</h3>
+              <p class="muted">Опишите симптомы — ответим с ориентировочной стоимостью и сроком.</p>
+            </div>
+            <a class="btn btn-primary" href="#request">Рассчитать стоимость</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="build">
         <div class="container">
           <div class="section-head">
             <h2 class="h2">Сборка компьютеров под&nbsp;заказ</h2>
@@ -135,7 +252,7 @@
 
           <div class="cards">
             <article class="card card--span-3">
-              <h2 class="h4">Как проходит сборка</h2>
+              <h3 class="h4">Как проходит сборка</h3>
               <ul class="list">
                 <li>Подбор железа и проверка совместимости</li>
                 <li>Смета и список комплектующих до начала сборки</li>
@@ -144,10 +261,243 @@
               </ul>
 
               <div class="contact-actions">
-                <a class="btn btn-primary" href="./contacts.html#request">Оставить заявку</a>
+                <a class="btn btn-primary" href="#request">Оставить заявку</a>
                 <a class="btn btn-ghost" href="tel:+79197590259" data-phone>Позвонить</a>
               </div>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="about">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="h2">О мастерской</h2>
+            <p class="muted">Прозрачный процесс, аккуратный ремонт и гарантия на результат.</p>
+          </div>
+
+          <ol class="steps">
+            <li class="step">
+              <div class="step-num" aria-hidden="true">1</div>
+              <div class="step-body">
+                <h3 class="h4">Заявка</h3>
+                <p class="muted">Уточняем симптомы, модель и ваши ожидания по срокам.</p>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-num" aria-hidden="true">2</div>
+              <div class="step-body">
+                <h3 class="h4">Диагностика</h3>
+                <p class="muted">Подтверждаем причину и предлагаем варианты решения.</p>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-num" aria-hidden="true">3</div>
+              <div class="step-body">
+                <h3 class="h4">Согласование</h3>
+                <p class="muted">Смета и сроки — только после вашего «да» приступаем к работам.</p>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-num" aria-hidden="true">4</div>
+              <div class="step-body">
+                <h3 class="h4">Ремонт и тесты</h3>
+                <p class="muted">Тестируем под нагрузкой и проверяем стабильность.</p>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-num" aria-hidden="true">5</div>
+              <div class="step-body">
+                <h3 class="h4">Выдача и гарантия</h3>
+                <p class="muted">Вы получаете устройство и рекомендации по дальнейшей эксплуатации.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section" id="reviews">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="h2">Отзывы</h2>
+            <p class="muted">Отзывы наших клиентов.</p>
+          </div>
+
+          <div class="reviews">
+            <figure class="review">
+              <blockquote>
+                «Ноутбук перегревался и выключался. Почистили, поменяли термопасту — стал тихий, температура
+                нормальная. Сделали за день».
+              </blockquote>
+              <figcaption>
+                <span class="review-name">Алексей</span>
+                <span class="muted">чистка и профилактика</span>
+              </figcaption>
+            </figure>
+
+            <figure class="review">
+              <blockquote>
+                «Поставили SSD и перенесли систему. Теперь включается за секунды. По цене всё заранее
+                согласовали, без сюрпризов».
+              </blockquote>
+              <figcaption>
+                <span class="review-name">Марина</span>
+                <span class="muted">апгрейд</span>
+              </figcaption>
+            </figure>
+
+            <figure class="review">
+              <blockquote>
+                «Настроили Wi‑Fi по дому и принтер по сети. Наконец-то всё работает стабильно».
+              </blockquote>
+              <figcaption>
+                <span class="review-name">Игорь</span>
+                <span class="muted">сеть и периферия</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="faq">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="h2">FAQ</h2>
+            <p class="muted">Ответы на популярные вопросы.</p>
+          </div>
+
+          <div class="faq">
+            <details class="faq-item">
+              <summary>Сколько занимает диагностика?</summary>
+              <p class="muted">
+                Обычно от 15 минут до 1 дня — зависит от симптомов и очереди. Срочные случаи стараемся
+                разбирать в день обращения.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary>Данные на диске сохранятся?</summary>
+              <p class="muted">
+                Если это возможно, мы сохраняем данные. При риске потери заранее предупреждаем и предлагаем
+                резервное копирование/восстановление.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary>Даете ли гарантию?</summary>
+              <p class="muted">
+                Да — на работы и установленные комплектующие. Срок зависит от типа ремонта и деталей.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary>Можно ли вызвать мастера?</summary>
+              <p class="muted">
+                Да, по городу и ближайшим районам. Часто выезд помогает для настройки сети, принтера,
+                «не грузится Windows» и т. п.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contacts">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="h2">Контакты</h2>
+            <p class="muted">Свяжитесь с нами любым удобным способом.</p>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-card contact-card--stack">
+              <h3 class="h4">Связаться</h3>
+              <div class="contact-list">
+                <a class="contact-link" href="tel:+79197590259" data-phone>+7 (919) 759-02-59</a>
+                <a class="contact-link" href="mailto:service@yandex.ru" data-email>service@yandex.ru</a>
+              </div>
+              <p class="muted contact-address">Ставропольский край, г. Пятигорск, ул. Ермолова, зд. 12</p>
+            </div>
+            <div class="contact-card">
+              <h3 class="h4">Режим работы</h3>
+              <div class="contact-list">
+                <p class="muted">Пн‑Пт: 9:00–18:00</p>
+                <p class="muted">Сб: 10:00–16:00</p>
+                <p class="muted">Вс: выходной</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="request">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="h2">Заявка на ремонт</h2>
+            <p class="muted">Оставьте заявку — мы свяжемся с вами.</p>
+          </div>
+
+          <div class="contact-grid">
+            <div class="hero-card" aria-label="Форма заявки">
+              <div class="hero-card-top">
+                <h3 class="h3">Опишите проблему</h3>
+                <p class="muted">Ответим с ориентировочной стоимостью и сроком.</p>
+              </div>
+
+              <form class="form" data-request-form>
+                <label class="field">
+                  <span class="field-label">Имя</span>
+                  <input class="input" name="name" autocomplete="name" placeholder="Как к вам обращаться" />
+                </label>
+
+                <label class="field">
+                  <span class="field-label">Телефон</span>
+                  <input
+                    class="input"
+                    name="phone"
+                    inputmode="tel"
+                    autocomplete="tel"
+                    placeholder="+7 (___) ___‑__‑__"
+                    required
+                  />
+                </label>
+
+                <label class="field">
+                  <span class="field-label">Устройство</span>
+                  <select class="input" name="device" required>
+                    <option value="ПК">ПК</option>
+                    <option value="Ноутбук">Ноутбук</option>
+                    <option value="Моноблок">Моноблок</option>
+                    <option value="Принтер / МФУ">Принтер / МФУ</option>
+                    <option value="Роутер / интернет">Роутер / интернет</option>
+                    <option value="Другое">Другое</option>
+                  </select>
+                </label>
+
+                <label class="field">
+                  <span class="field-label">Что случилось</span>
+                  <textarea
+                    class="input textarea"
+                    name="problem"
+                    rows="4"
+                    placeholder="Например: перегревается, шумит, не грузится Windows…"
+                    required
+                  ></textarea>
+                </label>
+
+                <button class="btn btn-primary btn-lg" type="submit">Отправить</button>
+                <p class="form-status" aria-live="polite" data-form-status></p>
+              </form>
+            </div>
+
+            <div class="contact-card">
+              <h3 class="h4">Быстрые варианты связи</h3>
+              <p class="muted">Если удобнее — звонок или письмо без формы.</p>
+              <div class="contact-list">
+                <a class="contact-link" href="tel:+79197590259" data-phone>+7 (919) 759-02-59</a>
+                <a class="contact-link" href="mailto:service@yandex.ru" data-email>service@yandex.ru</a>
+              </div>
+              <div class="contact-actions">
+                <a class="btn btn-secondary" href="tel:+79197590259" data-phone>Позвонить</a>
+                <a class="btn btn-ghost" href="mailto:service@yandex.ru" data-email>Написать на email</a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -157,9 +507,9 @@
       <div class="container footer-inner">
         <p class="muted">© <span data-year></span> Сервис‑мастерская. Все права защищены.</p>
         <div class="footer-links">
-          <a class="muted" href="./services.html">Услуги</a>
-          <a class="muted" href="./prices.html">Цены</a>
-          <a class="muted" href="./contacts.html">Контакты</a>
+          <a class="muted" href="#services">Услуги</a>
+          <a class="muted" href="#prices">Цены</a>
+          <a class="muted" href="#contacts">Контакты</a>
         </div>
       </div>
     </footer>

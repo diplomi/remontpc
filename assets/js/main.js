@@ -91,15 +91,55 @@ function initHashScrollOffset() {
   if (location.hash) setTimeout(apply, 0);
 }
 
-function initActiveNav() {
-  const page = document.documentElement.getAttribute("data-page");
-  if (!page) return;
+const NAV_SECTIONS = {
+  services: ["services"],
+  prices: ["prices"],
+  about: ["about", "build", "reviews", "faq"],
+  contacts: ["contacts", "request"],
+};
+
+function setActiveNav(key) {
   qsa("[data-navlink]").forEach((a) => {
     if (!(a instanceof HTMLAnchorElement)) return;
-    if (a.getAttribute("data-navlink") !== page) return;
-    a.setAttribute("aria-current", "page");
-    a.classList.add("is-active");
+    const active = a.getAttribute("data-navlink") === key;
+    a.classList.toggle("is-active", active);
+    if (active) a.setAttribute("aria-current", "true");
+    else a.removeAttribute("aria-current");
   });
+}
+
+function initScrollSpy() {
+  const navLinks = qsa("[data-navlink]");
+  if (!navLinks.length) return;
+
+  const sectionIds = new Set(Object.values(NAV_SECTIONS).flat());
+  const sections = Array.from(sectionIds)
+    .map((id) => document.getElementById(id))
+    .filter((el) => el instanceof HTMLElement);
+
+  if (!sections.length) return;
+
+  let activeKey = null;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const visible = entries
+        .filter((e) => e.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+      if (!visible.length) return;
+
+      const id = visible[0].target.id;
+      const key = Object.entries(NAV_SECTIONS).find(([, ids]) => ids.includes(id))?.[0];
+      if (!key || key === activeKey) return;
+
+      activeKey = key;
+      setActiveNav(key);
+    },
+    { rootMargin: "-35% 0px -55% 0px", threshold: [0, 0.1, 0.25] }
+  );
+
+  sections.forEach((s) => observer.observe(s));
 }
 
 function initFaqSingleOpen() {
@@ -187,7 +227,7 @@ applyContacts();
 initYear();
 initBurger();
 initHashScrollOffset();
-initActiveNav();
+initScrollSpy();
 initFaqSingleOpen();
 initForm();
 
